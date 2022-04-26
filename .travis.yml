@@ -11,6 +11,7 @@ install:
 - npm install
 - npm install -g ngrok
 before_script:
+- npm install grunt-cli -g
 - mkdir public
 - curl -sO http://stedolan.github.io/jq/download/linux64/jq
 - ngrok http file://$(pwd)/public/ --authtoken=${NGROK_AUTH_TOKEN} > /dev/null &
